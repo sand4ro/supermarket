@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>გაყიდვები</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins', sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+color:white;
+overflow-x:hidden;
+}
+
+/* ===== MENU ===== */
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 50px;
+background:rgba(0,0,0,0.5);
+position:fixed;
+width:100%;
+top:0;
+z-index:1000;
+}
+
+nav h2{
+color:#00ff99;
+}
+
+nav ul{
+display:flex;
+gap:20px;
+list-style:none;
+}
+
+nav ul li a{
+text-decoration:none;
+color:white;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#00ff99;
+}
+
+/* ===== HERO SECTION ===== */
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding-top:80px;
+}
+
+.earth{
+width:250px;
+height:250px;
+border-radius:50%;
+background:url("https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg");
+background-size:cover;
+animation:rotate 20s linear infinite;
+box-shadow:0 0 40px #00ff99;
+margin-bottom:30px;
+}
+
+@keyframes rotate{
+from{transform:rotate(0deg);}
+to{transform:rotate(360deg);}
+}
+
+.hero h1{
+font-size:40px;
+color:#00ff99;
+}
+
+.hero p{
+font-size:20px;
+margin-top:15px;
+}
+
+/* ===== PRODUCTS ===== */
+.products{
+padding:80px 40px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:30px;
+background:#111;
+}
+
+.card{
+background:#1c1c1c;
+width:280px;
+padding:20px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 30px rgba(0,255,153,0.3);
+transition:0.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 40px rgba(0,255,153,0.6);
+}
+
+.card img{
+width:100%;
+border-radius:15px;
+}
+
+.price{
+color:#00ff99;
+font-size:20px;
+font-weight:bold;
+margin:10px 0;
+}
+
+button{
+background:#00ff99;
+color:black;
+border:none;
+padding:10px 20px;
+border-radius:10px;
+cursor:pointer;
+font-weight:bold;
+transition:0.3s;
+}
+
+button:hover{
+background:white;
+}
+
+/* ===== FOOTER ===== */
+footer{
+text-align:center;
+padding:20px;
+background:black;
+color:#00ff99;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<h2>GreenShop</h2>
+<ul>
+<li><a href="#">მთავარი</a></li>
+<li><a href="#products">პროდუქტები</a></li>
+<li><a href="#">კონტაქტი</a></li>
+</ul>
+</nav>
+
+<section class="hero">
+<div class="earth"></div>
+<h1>მოგესალმებით ჩემს საიტზე</h1>
+<p>სადაც შეგიძლიათ იყიდოთ ნებისმიერი რამ</p>
+</section>
+
+<section class="products" id="products">
+
+<div class="card">
+<img src="https://via.placeholder.com/280" alt="">
+<h3>პროდუქტი 1</h3>
+<p class="price">50₾</p>
+<button onclick="alert('დაგვიკავშირდით შესაძენად!')">ყიდვა</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/280" alt="">
+<h3>პროდუქტი 2</h3>
+<p class="price">80₾</p>
+<button onclick="alert('დაგვიკავშირდით შესაძენად!')">ყიდვა</button>
+</div>
+
+<div class="card">
+<img src="https://via.placeholder.com/280" alt="">
+<h3>პროდუქტი 3</h3>
+<p class="price">120₾</p>
+<button onclick="alert('დაგვიკავშირდით შესაძენად!')">ყიდვა</button>
+</div>
+
+</section>
+
+<footer>
+© 2026 GreenShop - ყველა უფლება დაცულია
+</footer>
+
+</body>
+</html>
